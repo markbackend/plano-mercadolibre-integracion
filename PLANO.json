@@ -1,0 +1,20 @@
+{
+  "nombre": "plano-mercadolibre-integracion",
+  "sirve_para": [
+    "Conectar la cuenta de un vendedor con la API de Mercado Libre (OAuth 2.0 con renovación automática)",
+    "Sincronizar stock y precio por SKU (con variaciones) desde CSV, Excel o la API del cliente",
+    "Recibir notificaciones (webhook) de órdenes, preguntas e items sin duplicados",
+    "Responder preguntas de compradores por reglas o con IA, con aprobación de una persona",
+    "Guardar órdenes, avisar ventas por Telegram o webhook y exportarlas a Excel/CSV"
+  ],
+  "palabras_clave_workana": [
+    "mercado libre", "mercadolibre", "api mercado libre", "integracion mercado libre", "sincronizar stock",
+    "stock mercado libre", "precios mercado libre", "responder preguntas automaticamente", "bot mercado libre",
+    "webhook mercado libre", "ordenes mercado libre", "oauth mercado libre", "erp mercado libre",
+    "fastapi", "python", "integracion api"
+  ],
+  "lenguaje": "Python 3.12 (FastAPI, httpx, SQLite, openpyxl)",
+  "pruebas": "92 pasan, 0 fallan",
+  "horas_adaptar": "2-6",
+  "precio_sugerido_usd": "150-450"
+}

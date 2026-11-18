@@ -1,0 +1,10 @@
+{
+  "estado": "listo",
+  "pruebas": "92 pasan, 0 fallan",
+  "resumen": "Integración con Mercado Libre en Python + FastAPI + SQLite: OAuth con renovación bloqueada, sincronización de stock/precio por SKU con variaciones y simulacro, webhook con cola sin duplicados, preguntas por reglas o IA con aprobación, órdenes con avisos y export. Demo de 1 minuto (demo.py) y simulador HTTP probados; también se probó el servidor real contra el simulador.",
+  "pendiente": [
+    "Verificar contra la API real (con usuarios de test) los formatos que imita el simulador: multiget /items, PUT con variaciones, /questions/search y la URL de autorización por país.",
+    "Para vendedores con más de 1000 publicaciones, implementar search_type=scan en ClienteML.buscar_items_vendedor.",
+    "La base SQLite tiene esquema fijo: si se cambia, no hay migraciones (borrar la base de prueba o agregar ALTER TABLE)."
+  ]
+}

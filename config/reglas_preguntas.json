@@ -1,0 +1,40 @@
+{
+  "_ayuda": "Reglas para responder preguntas. Si la pregunta contiene alguna de las 'palabras' se usa la 'plantilla'. Datos disponibles en las plantillas: {titulo}, {precio}, {moneda}, {stock}, {condicion}. Si falta un dato que la plantilla usa, la regla no se aplica (nunca se inventa). 'derivar_a_persona': si aparece alguna de esas palabras, NO se responde solo. Las palabras se comparan sin mayúsculas ni tildes.",
+  "saludo": "Hola!",
+  "firma": "Saludos.",
+  "derivar_a_persona": ["reclamo", "devolucion", "garantia", "roto", "fallado", "denuncia", "descuento", "rebaja", "mas barato"],
+  "reglas": [
+    {
+      "nombre": "stock",
+      "palabras": ["stock", "disponible", "hay unidades", "quedan", "queda", "les queda"],
+      "plantilla": "Sí, tenemos stock disponible ({stock} unidades). Podés comprar directamente.",
+      "requiere_stock": true
+    },
+    {
+      "nombre": "sin_stock",
+      "palabras": ["stock", "disponible", "hay unidades", "quedan", "queda", "les queda"],
+      "plantilla": "En este momento no tenemos stock de este producto. Apenas reingrese se actualiza la publicación.",
+      "requiere_sin_stock": true
+    },
+    {
+      "nombre": "envio",
+      "palabras": ["envio", "envios", "llega", "demora", "tarda", "flete", "correo", "mandan", "mandas", "despacho", "retiro"],
+      "plantilla": "Hacemos envíos a todo el país por Mercado Envíos. El costo y la fecha estimada de entrega los ves en la publicación al poner tu código postal."
+    },
+    {
+      "nombre": "factura",
+      "palabras": ["factura", "facturan", "factura a", "iva", "cuit"],
+      "plantilla": "Sí, emitimos factura. Después de la compra mandanos por mensaje los datos de facturación."
+    },
+    {
+      "nombre": "precio",
+      "palabras": ["precio", "cuanto sale", "cuanto cuesta", "valor", "es el precio final"],
+      "plantilla": "El precio publicado es {moneda} {precio} y es final."
+    },
+    {
+      "nombre": "estado",
+      "palabras": ["nuevo", "usado", "original", "sellado"],
+      "plantilla": "El producto es {condicion}, tal como figura en la publicación."
+    }
+  ]
+}
